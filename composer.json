@@ -1,0 +1,15 @@
+{
+    "require-dev": {
+      "phpunit/phpunit": "^10.2"
+    },
+    "autoload": {
+      "psr-4": {
+        "Steepik\\": "src/"
+      }
+    },
+    "autoload-dev": {
+      "psr-4": {
+        "Steepik\\Tests\\": "tests/"
+      }
+    }
+}
