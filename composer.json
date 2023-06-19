@@ -1,5 +1,8 @@
 {
-    "require-dev": {
+  "name": "Test",
+  "description": "Inetstudio test",
+  "license": "MIT",
+  "require-dev": {
       "phpunit/phpunit": "^10.2"
     },
     "autoload": {
