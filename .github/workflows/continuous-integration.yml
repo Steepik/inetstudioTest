@@ -1,0 +1,21 @@
+name: Continuous Integration
+
+on:
+    pull_request: ~
+    push:
+        branches: ['main']
+
+jobs:
+    make-check:
+        runs-on: ubuntu-latest
+        steps:
+            - uses: actions/checkout@v3.3.0
+            - uses: shivammathur/setup-php@v2
+              with:
+                  php-version: 8.2
+                  tools: composer:v2
+                  coverage: none
+            - uses: ramsey/composer-install@v2
+              with:
+                  composer-options: --optimize-autoloader
+            - run: make check
